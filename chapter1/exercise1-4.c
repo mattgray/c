@@ -10,13 +10,13 @@ int main()
   upper = 300; /* upper limit of temperatuire scale */
   step = 20; /* step size */
 
-  fahr = lower;
+  celsius = lower;
 
-  printf("  F      C\n\n");
+  printf("  C      F\n\n");
 
-  while (fahr <= upper) {
-    celsius = (5.0/9.0) * (fahr-32.0);
-    printf("%3.0f %6.1f\n", fahr, celsius);
-    fahr = fahr + step;
+  while (celsius <= upper) {
+    fahr = celsius * (9.0/5.0) + 32.0;
+    printf("%3.0f %6.1f\n", celsius, fahr);
+    celsius = celsius + step;
   }
 }
