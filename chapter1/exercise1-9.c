@@ -7,9 +7,9 @@ int main(void)
 
   while((c = getchar()) != EOF) {
     if(c == ' ') {
-      ++spaces;
+      spaces = 1;
     } else {
-      if(spaces > 0) {
+      if(spaces == 1) {
         putchar(' ');
         spaces = 0;
       }

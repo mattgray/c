@@ -32,6 +32,7 @@ hello.c:5:27: error: expected ';' after expression
 
 THis is a parse error. And so is missing out the braces of the function declaration.
 
-## 1-2
+## 1-11
 
+Run the program with inputs such as: empty file, file with one word, file with only blank spaces, file with only newlines, etc
 
