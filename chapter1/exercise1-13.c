@@ -14,18 +14,19 @@ int main(void) {
     counts[i] = 0;
 
   while((c = getchar()) != EOF) {
-    if(c == ' ' || c == '\t' || c == '\n'){
-      if(wordlength > 0) {
-        if(wordlength < LONGEST_WORD) {
-          ++counts[wordlength - 1];
-        } else {
-          ++counts[LONGEST_WORD - 1];
-        }
-      }
-      wordlength = 0;
-    } else {
+    if(c != ' ' && c != '\t' && c != '\n'){
       ++wordlength;
+      continue;
     }
+
+    if(wordlength > 0) {
+      if(wordlength < LONGEST_WORD) {
+        ++counts[wordlength - 1];
+      } else {
+        ++counts[LONGEST_WORD - 1];
+      }
+    }
+    wordlength = 0;
   }
 
   for(int i=1; i < LONGEST_WORD; ++i) {
